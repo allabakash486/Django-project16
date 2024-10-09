@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            background-color: aqua;
+        }
+        .one
+        {
+            color: orange;
+            background-color: black;
+            box-shadow: 0px,0px,white 20px;
+        }
+        .one:hover
+        {
+            
+            color: blue;
+            background-color:white ;
+        }
+        .two
+        {
+            color: White;
+            padding: 10px;
+            
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <marquee behavior="" direction="" class="two"><h1>Employee Details</h1></marquee>
+        <table border="2px">
+            <tr align="center" class="one">
+                <th>empno</th>
+                <th>ename</th>
+                <th>job</th>
+                <th>sal</th>
+                <th>mgr</th>
+                <th>comm</th>  
+                <th>deptno</th>  
+                <th>Dname</th>  
+                <th>location</th>          
+            </tr>
+                
+            {% for empd in EmpDepO %}
+            <tr align="center">
+                <td>
+                    {{empd.empno}}
+                </td>
+                <td>
+                    {{empd.ename}}
+                </td>
+                <td>
+                    {{empd.job}}
+                </td>
+                <td>
+                    {{empd.sal}}
+                </td>
+                <td>
+                    {{empd.mgr}}
+                </td>
+                <td>
+                    {{empd.comm}}
+                </td>
+                <td>{{empd.deptno.deptno}}</td>
+                <td>{{empd.deptno.dname}}</td>
+                <td>{{empd.deptno.loc}}</td>
+            </tr>
+            {% endfor%}
+        </table>
+    </center>
+</body>
+</html>

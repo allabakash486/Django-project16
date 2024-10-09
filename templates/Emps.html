@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Details whose name starts with 'S'</h1>
+        <table align="center" border="2px">
+            <tr>
+                <th>Employee_number</th>
+                <th>Employee_name</th>
+                <th>Employee_Job</th>
+                <th>Employee_Salary</th>
+
+                <th>Employee_Manager</th>
+                <th>Employee_Commission</th>
+                <th>Employee_Deptno</th>
+            </tr>
+            {% for emps in empso %}
+            <tr>
+                <td>{{emps.empno}}</td>
+                <td>{{emps.ename}}</td>
+                <td>{{emps.job}}</td>
+                <td>{{emps.sal}}</td>
+                
+                <td>{{emps.mgr}}</td>
+                <td>{{emps.comm}}</td>
+                <td>{{emps.deptno}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </center>
+</body>
+</html>
